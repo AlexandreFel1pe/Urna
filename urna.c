@@ -42,7 +42,7 @@ void displayMain(void)
     printf("Bem vindo a urna eletronica\n");
     printf("\nPara cadastrar um candidato digite: (c).\n");
     printf("\nPara listar os candidatos cadastrados digite: (l).\n");
-    printf("\nPara iniciar votacao digite: (i).\n");
+    printf("\nPara iniciar votacao digite: (v).\n");
     printf("\nPara ver o resultado digite: (r). \n");
     printf("\nDigite a opcao: ");
 
@@ -58,7 +58,7 @@ void displayMain(void)
         listaCandidato();
         break;
 
-    case 'i':
+    case 'v':
         votacao();
         break;
 
@@ -140,10 +140,11 @@ void votacao()
                 arrayVotoCandidato[i] = arrayVotoCandidato[i] + 1;
                 break;
             }
+            if(opcao = 'r') {resultado(); break;}
         }
     }
 
-    displayMain();
+    votacao();
 }
 
 void resultado(void)
